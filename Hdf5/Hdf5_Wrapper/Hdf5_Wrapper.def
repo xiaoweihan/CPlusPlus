@@ -1,0 +1,8 @@
+LIBRARY
+
+EXPORTS
+
+Data2Hdf5=Data2Hdf5  @1
+Hdf52Data=Hdf52Data  @2
+Hdf52Data_Quick=Hdf52Data_Quick  @3
+ReadHdf5MatrixData=ReadHdf5MatrixData @4
