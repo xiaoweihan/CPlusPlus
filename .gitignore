@@ -3,4 +3,8 @@
 /Hdf5/ipch/Test_Hdf5_Wrapper/
 x64/
 *.user
-
+*.db
+*.suo
+*.aps
+*.bak
+*.opendb
