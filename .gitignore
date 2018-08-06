@@ -1,6 +1,6 @@
 /Hdf5/bin_x64/
 /Hdf5/ipch/
-/Hdf5/ipch/Test_Hdf5_Wrapper/
+/Hdf5/Test_Hdf5_Wrapper/
 x64/
 *.user
 *.db
