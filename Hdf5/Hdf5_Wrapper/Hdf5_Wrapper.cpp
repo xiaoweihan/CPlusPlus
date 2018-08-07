@@ -395,6 +395,13 @@ int OuterType::Data2Hdf5(const char* szFilePath, std::vector<HDF5_DATA>& DataArr
 		boost::lock_guard<boost::mutex> Locker(s_Lock);
 		nResult = Contex.WriteH5(DstArray);
 	}
+
+	//读取失败
+	if (ERROR_NO_ERROR != nResult)
+	{
+		return nResult;
+	}
+
 	return nResult;
 }
 
@@ -448,6 +455,12 @@ int OuterType::Hdf52Data(const char* szFilePath, const std::vector<HDF5_QUERY_PA
 		//加锁
 		boost::lock_guard<boost::mutex> Locker(s_Lock);
 		nResult = Contex.ReadH5(QueryParams,Results);
+	}
+
+	//读取失败
+	if (ERROR_NO_ERROR != nResult)
+	{
+		return nResult;
 	}
 
 	//进行数据转换
@@ -506,6 +519,12 @@ int OuterType::Hdf52Data_Quick(const char* szFilePath, const std::vector<HDF5_QU
 		//加锁
 		boost::lock_guard<boost::mutex> Locker(s_Lock);
 		nResult = Contex.ReadH5_Quick(QueryParams, Results);
+	}
+
+	//读取失败
+	if (ERROR_NO_ERROR != nResult)
+	{
+		return nResult;
 	}
 
 	//进行数据转换
@@ -570,6 +589,12 @@ int OuterType::ReadHdf5MatrixData(const char* szFilePath, const std::vector<HDF5
 		//加锁
 		boost::lock_guard<boost::mutex> Locker(s_Lock);
 		nResult = Contex.ReadH5_PartialData(QueryParams, Results);
+	}
+
+	//读取失败
+	if (ERROR_NO_ERROR != nResult)
+	{
+		return nResult;
 	}
 
 	//进行数据转换
